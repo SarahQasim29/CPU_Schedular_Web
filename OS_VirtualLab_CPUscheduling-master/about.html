@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>OS Virtual Lab</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="Assets/css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="Assets/css/animate.css" type="text/css">
+    <link rel="stylesheet" href="Assets/css/about.css" type="text/css">
+
+    <!-- Footer -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="Assets/css/about.css">
+
+    <link rel="shortcut icon" type="image/png" href="Assets/images/website_logo1.png">
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+.about-section {
+    background: white;
+    color: #333333;
+    text-align: center;
+}
+
+.about-section .about-text {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.team-section {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    background-color: white;
+}
+
+.team-member {
+    margin: 5%;
+    margin-top: 0;
+    background:  transparent;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 350px;
+    transition: background 0.3s ease;
+}
+
+.team-member:hover {
+    background: rgba(255, 255, 255, 1);
+}
+
+.team-member img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    margin: 5%;
+    margin-top: 0;
+    margin-bottom: 15px;
+    box-shadow: 0px 0 10px rgba(0, 0, 0, 0.9);
+}
+
+.team-member h3 {
+    margin: 10px 0 5px 0;
+}
+
+.team-member p {
+    font-size: 12px;
+    color: #555555;
+    margin: 5px 0;
+}
+
+.team-member a svg {
+    width: 24px;
+    height: 24px;
+    margin-top: 10px;
+    fill: #0A66C2;
+    transition: fill 0.3s ease;
+}
+
+.team-member a:hover svg {
+    fill: #004182;
+}
+
+.zoom-container {
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover .zoom-container {
+    transform: scale(1.1);
+}
+</style>
+<body>
+<nav class="navbar sticky-top navbar-expand-lg" style="position: fixed;">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+            <img id="logo" src="Assets/images/website_logo1.png" alt="logo">
+            <div class="hover-border">OS Virtual Lab</div>
+        </a>
+        <div class="divider"></div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">
+                        <div class="hover-border">Home</div>
+                    </a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                       data-bs-toggle="dropdown" aria-expanded="false">
+                        Algorithms
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark " aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="Page_Replacement/pagereplacement_index.html">Page
+                            Replacement</a></li>
+                        <li><a class="dropdown-item" href="CPU_Scheduling/cpu_schdeuling_index.html">CPU Scheduling</a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+
+            <div class="d-flex">
+                <div class="dropdown">
+                    <input id="search-input" class="form-control me-2 dropdown-toggle" data-bs-toggle="dropdown"
+                           aria-expanded="false" placeholder="Type to search...">
+                    <ul id="suggestions" class="dropdown-menu dropdown-menu-dark" aria-labelledby="search-button">
+                    </ul>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                         class="bi bi-search" viewBox="0 0 16 16" style="position: absolute; right: 15px;">
+                        <path
+                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="about-section" style="margin-top: 5%;">
+    <div class="about-text">
+        <h1 style="font-family: Cambria, sans-serif; margin-top: 2%;">I believe in the power of information</h1>
+        <p style="font-size: 14px;">The mission of OS CPU Scheduler is to revolutionize the way people interact with CPU scheduling. It strive to make it easy and efficient for operating systems to manage tasks, providing accurate and optimal scheduling algorithms. The goal is to make OS CPU Scheduler an indispensable tool for anyone who relies on digital information to do their job.</p>
+    </div>
+</div>
+
+<div class="team-section">
+    
+    <div class="team-member">
+        <div class="zoom-container">
+            <img src="Assets/images/dev_2.jpg" alt="Sarah Qasim">
+            <h3>Sarah Qasim</h3>
+            <p>BSE Undergraduate Student</p>
+            <p>Bahria University Karachi Campus</p>
+            <a href="https://www.linkedin.com/in/sarah-qasim-6392bb287?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="#0A66C2">
+                    <path d="M22.23 0H1.77C.792 0 0 .774 0 1.73v20.54C0 23.225.792 24 1.77 24h20.46C23.208 24 24 23.225 24 22.27V1.73C24 .774 23.208 0 22.23 0zM7.09 20.452H3.56V9h3.53v11.452zM5.325 7.668a2.044 2.044 0 110-4.087 2.044 2.044 0 010 4.087zm15.127 12.784h-3.534v-5.804c0-1.384-.028-3.166-1.932-3.166-1.934 0-2.23 1.51-2.23 3.07v5.9h-3.534V9h3.391v1.56h.047c.472-.895 1.63-1.836 3.355-1.836 3.59 0 4.255 2.363 4.255 5.44v6.287z"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+<script src="Assets/js/search.js"></script>
+<script src="Assets/js/typewriter.js"></script>
+</body>
+
+</html>
